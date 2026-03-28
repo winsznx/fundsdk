@@ -21,3 +21,7 @@ export interface SetMilestoneReleasePayload {
   milestoneIndex: number;
   isReleased: boolean;
 }
+export interface CancelCampaignPayload {
+  campaignId: string;
+  reason?: string;
+}
