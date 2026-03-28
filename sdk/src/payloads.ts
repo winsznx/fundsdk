@@ -47,3 +47,7 @@ export interface PauseCampaignPayload {
 export interface FinalizeCampaignPayload {
   campaignId: string;
 }
+export interface GetPledgeStatusPayload {
+  campaignId: string;
+  address: string;
+}
