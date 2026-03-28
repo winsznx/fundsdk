@@ -17,3 +17,6 @@ export interface MilestoneClaimEvent extends FundotEvent {
   index: number;
   amount: number;
 }
+export interface CampaignCompleteEvent extends FundotEvent {
+  type: "COMPLETED";
+}
