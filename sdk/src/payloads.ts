@@ -8,3 +8,7 @@ export interface PledgePayload {
   campaignId: string;
   amountMicroStx: number;
 }
+export interface RefundPayload {
+  campaignId: string;
+  pledgerAddress: string;
+}
