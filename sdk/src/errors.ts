@@ -58,3 +58,9 @@ export class TransactionRejectedError extends FundotError {
     this.name = "TransactionRejectedError";
   }
 }
+export class MilestoneAlreadyClaimedError extends FundotError {
+  constructor() {
+    super("This milestone has already been claimed by the creator.");
+    this.name = "MilestoneAlreadyClaimedError";
+  }
+}
