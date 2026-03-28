@@ -21,3 +21,4 @@ export const calculatePlatformFeeMicro = (amount: number) => Math.floor(amount *
 export const calculateNetPayoutMicro = (amount: number) => amount - calculatePlatformFeeMicro(amount);
 export const toKebabCase = (str: string) => str.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
 export const formatNetworkName = (name: string) => name.trim().toLowerCase() as "mainnet" | "testnet" | "devnet";
+export const getApiUrl = (network: string) => network === "mainnet" ? "https://api.mainnet.hiro.so" : "https://api.testnet.hiro.so";
