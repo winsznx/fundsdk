@@ -64,3 +64,9 @@ export class MilestoneAlreadyClaimedError extends FundotError {
     this.name = "MilestoneAlreadyClaimedError";
   }
 }
+export class RefundNotAvailableError extends FundotError {
+  constructor() {
+    super("Refunds are only available if the campaign fails.");
+    this.name = "RefundNotAvailableError";
+  }
+}
