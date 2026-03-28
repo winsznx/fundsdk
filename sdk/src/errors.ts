@@ -112,3 +112,9 @@ export class InvalidSignatureError extends FundotError {
     this.name = "InvalidSignatureError";
   }
 }
+export class VaultAlreadyInitializedError extends FundotError {
+  constructor() {
+    super("Vault instances cannot be double initialized.");
+    this.name = "VaultAlreadyInitializedError";
+  }
+}
