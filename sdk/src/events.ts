@@ -12,3 +12,8 @@ export interface RefundEvent extends FundotEvent {
   amount: number;
   pledger: string;
 }
+export interface MilestoneClaimEvent extends FundotEvent {
+  type: "MILESTONE_CLAIM";
+  index: number;
+  amount: number;
+}
