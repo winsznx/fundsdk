@@ -118,3 +118,9 @@ export class VaultAlreadyInitializedError extends FundotError {
     this.name = "VaultAlreadyInitializedError";
   }
 }
+export class ContractVersionDeprecatedError extends FundotError {
+  constructor(ver: string) {
+    super(`Contract version ${ver} is officially deprecated.`);
+    this.name = "ContractVersionDeprecatedError";
+  }
+}
