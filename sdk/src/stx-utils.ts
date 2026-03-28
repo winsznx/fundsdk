@@ -11,3 +11,4 @@ export const extractDeployer = (fullAddr: string) => fullAddr.includes(".") ? fu
 export const getExplorerAccountUrl = (addr: string, network: string = "mainnet") => `https://explorer.hiro.so/txid/${addr}?chain=${network}`;
 export const getExplorerTxUrl = (txid: string, network: string = "mainnet") => `https://explorer.hiro.so/txid/${txid}?chain=${network}`;
 export const ensureHexPrefix = (hex: string) => hex.startsWith("0x") ? hex : `0x${hex}`;
+export const stripHexPrefix = (hex: string) => hex.startsWith("0x") ? hex.slice(2) : hex;
