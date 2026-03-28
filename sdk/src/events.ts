@@ -21,3 +21,4 @@ export interface CampaignCompleteEvent extends FundotEvent {
   type: "COMPLETED";
 }
 export const isPledgeEvent = (event: FundotEvent): event is PledgeEvent => (event as any).type === "PLEDGE";
+export const isRefundEvent = (event: FundotEvent): event is RefundEvent => (event as any).type === "REFUND";
