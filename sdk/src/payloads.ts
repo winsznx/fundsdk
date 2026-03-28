@@ -32,3 +32,7 @@ export interface UpdateGoalPayload {
   campaignId: string;
   newGoalMicroStx: number;
 }
+export interface AddMilestonePayload {
+  campaignId: string;
+  percentage: number;
+}
