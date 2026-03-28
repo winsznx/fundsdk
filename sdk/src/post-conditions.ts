@@ -4,3 +4,8 @@ export interface StandardPostCondition {
   amount: number;
   condition: "eq" | "gt" | "gte" | "lt" | "lte";
 }
+export interface FungiblePostCondition {
+  type: "ft";
+  amount: number;
+  assetInfo: string;
+}
