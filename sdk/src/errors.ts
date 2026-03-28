@@ -34,3 +34,9 @@ export class InsufficientStxError extends FundotError {
     this.name = "InsufficientStxError";
   }
 }
+export class InvalidPrincipalError extends FundotError {
+  constructor(address: string) {
+    super(`Invalid Stacks principal address provided: ${address}`);
+    this.name = "InvalidPrincipalError";
+  }
+}
