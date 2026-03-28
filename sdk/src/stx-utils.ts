@@ -15,3 +15,4 @@ export const stripHexPrefix = (hex: string) => hex.startsWith("0x") ? hex.slice(
 export const toSnakeCase = (str: string) => str.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`).replace(/^_/, "");
 export const calculateFeeThreshold = (feeMultiplier: number) => Math.floor(400 * feeMultiplier);
 export const getBurnBlockMultiplier = () => 1.5;
+export const isTransactionPending = (status: string) => status === "pending";
