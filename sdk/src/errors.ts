@@ -88,3 +88,9 @@ export class CampaignAlreadyCompletedError extends FundotError {
     this.name = "CampaignAlreadyCompletedError";
   }
 }
+export class UserNotPledgerError extends FundotError {
+  constructor() {
+    super("Address does not have a pledge associated with this campaign.");
+    this.name = "UserNotPledgerError";
+  }
+}
