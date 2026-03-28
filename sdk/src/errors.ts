@@ -22,3 +22,9 @@ export class InvalidPledgeAmountError extends FundotError {
     this.name = "InvalidPledgeAmountError";
   }
 }
+export class VaultInactiveError extends FundotError {
+  constructor() {
+    super("The vault for this campaign is not currently active.");
+    this.name = "VaultInactiveError";
+  }
+}
