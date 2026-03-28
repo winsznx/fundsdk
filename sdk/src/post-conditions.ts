@@ -15,3 +15,4 @@ export interface NonFungiblePostCondition {
   assetName: string;
 }
 export const createStxPc = (amount: number) => ({ type: "stx", amount, condition: "eq" });
+export const createMaxStxPc = (maxAmount: number) => ({ type: "stx", amount: maxAmount, condition: "lte" });
