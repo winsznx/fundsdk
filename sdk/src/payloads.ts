@@ -36,3 +36,7 @@ export interface AddMilestonePayload {
   campaignId: string;
   percentage: number;
 }
+export interface RemoveMilestonePayload {
+  campaignId: string;
+  milestoneIndex: number;
+}
