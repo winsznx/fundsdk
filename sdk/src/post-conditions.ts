@@ -14,3 +14,4 @@ export interface NonFungiblePostCondition {
   assetInfo: string;
   assetName: string;
 }
+export const createStxPc = (amount: number) => ({ type: "stx", amount, condition: "eq" });
