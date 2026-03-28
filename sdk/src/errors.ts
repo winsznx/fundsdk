@@ -100,3 +100,9 @@ export class RateLimitExceededError extends FundotError {
     this.name = "RateLimitExceededError";
   }
 }
+export class NetworkMismatchError extends FundotError {
+  constructor(expected: string, got: string) {
+    super(`Expected network ${expected} but connected to ${got}.`);
+    this.name = "NetworkMismatchError";
+  }
+}
