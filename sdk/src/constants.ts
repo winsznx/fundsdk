@@ -9,3 +9,4 @@ export const MICRO_STX_MULTIPLIER = 1000000;
 export const DEFAULT_TRANSACTION_FEE = 400;
 export const MAX_TRANSACTION_FEE = 15000;
 export const PLATFORM_FEE_PERCENTAGE = 2.5;
+export const CAMPAIGN_STATUS_PENDING = "pending";
