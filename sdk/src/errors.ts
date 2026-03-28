@@ -16,3 +16,9 @@ export class MilestoneNotReleasedError extends FundotError {
     this.name = "MilestoneNotReleasedError";
   }
 }
+export class InvalidPledgeAmountError extends FundotError {
+  constructor() {
+    super("Pledge amount must be greater than 0 micro-STX.");
+    this.name = "InvalidPledgeAmountError";
+  }
+}
