@@ -82,3 +82,9 @@ export class InvalidMilestoneIndexError extends FundotError {
     this.name = "InvalidMilestoneIndexError";
   }
 }
+export class CampaignAlreadyCompletedError extends FundotError {
+  constructor() {
+    super("This campaign is already finalized and completed.");
+    this.name = "CampaignAlreadyCompletedError";
+  }
+}
