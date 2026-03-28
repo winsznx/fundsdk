@@ -28,3 +28,9 @@ export class VaultInactiveError extends FundotError {
     this.name = "VaultInactiveError";
   }
 }
+export class InsufficientStxError extends FundotError {
+  constructor() {
+    super("Insufficient STX balance to cover transaction and gas fees.");
+    this.name = "InsufficientStxError";
+  }
+}
