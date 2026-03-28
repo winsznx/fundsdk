@@ -94,3 +94,9 @@ export class UserNotPledgerError extends FundotError {
     this.name = "UserNotPledgerError";
   }
 }
+export class RateLimitExceededError extends FundotError {
+  constructor() {
+    super("Hiro API rate limits exceeded. Please implement backoff strategies.");
+    this.name = "RateLimitExceededError";
+  }
+}
