@@ -33,7 +33,7 @@ const currencyFormatter = new Intl.NumberFormat("en-US", {
   currency: "USD"
 });
 
-export const sdkVersion = "0.1.0";
+export const sdkVersion = "0.1.1";
 
 export function calculateProgress(campaign: CampaignData): number {
   if (campaign.goal <= 0) {
