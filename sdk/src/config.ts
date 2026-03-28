@@ -4,3 +4,4 @@ export interface SDKConfig {
 }
 export const defaultSDKConfig: SDKConfig = { network: "testnet" };
 export const resolveConfig = (config: Partial<SDKConfig>) => ({ ...defaultSDKConfig, ...config });
+export interface NetworkOptions { timeoutMs: number; retries: number; }
