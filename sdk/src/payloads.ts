@@ -25,3 +25,6 @@ export interface CancelCampaignPayload {
   campaignId: string;
   reason?: string;
 }
+export interface TransferOwnershipPayload {
+  newOwnerAddress: string;
+}
