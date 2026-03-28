@@ -12,3 +12,7 @@ export interface RefundPayload {
   campaignId: string;
   pledgerAddress: string;
 }
+export interface ClaimMilestonePayload {
+  campaignId: string;
+  milestoneIndex: number;
+}
