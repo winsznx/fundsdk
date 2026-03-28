@@ -106,3 +106,9 @@ export class NetworkMismatchError extends FundotError {
     this.name = "NetworkMismatchError";
   }
 }
+export class InvalidSignatureError extends FundotError {
+  constructor() {
+    super("The provided post-condition signature is invalid or malformed.");
+    this.name = "InvalidSignatureError";
+  }
+}
