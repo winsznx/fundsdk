@@ -51,3 +51,8 @@ export interface GetPledgeStatusPayload {
   campaignId: string;
   address: string;
 }
+export interface ContractCallOptions {
+  nonce?: number;
+  fee?: number;
+  sponsorAddress?: string;
+}
