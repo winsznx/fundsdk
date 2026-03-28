@@ -44,3 +44,6 @@ export interface PauseCampaignPayload {
   campaignId: string;
   pauseDurationBlocks: number;
 }
+export interface FinalizeCampaignPayload {
+  campaignId: string;
+}
