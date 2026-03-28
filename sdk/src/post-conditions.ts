@@ -9,3 +9,8 @@ export interface FungiblePostCondition {
   amount: number;
   assetInfo: string;
 }
+export interface NonFungiblePostCondition {
+  type: "nft";
+  assetInfo: string;
+  assetName: string;
+}
