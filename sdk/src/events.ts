@@ -20,3 +20,4 @@ export interface MilestoneClaimEvent extends FundotEvent {
 export interface CampaignCompleteEvent extends FundotEvent {
   type: "COMPLETED";
 }
+export const isPledgeEvent = (event: FundotEvent): event is PledgeEvent => (event as any).type === "PLEDGE";
