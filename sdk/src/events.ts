@@ -7,3 +7,8 @@ export interface PledgeEvent extends FundotEvent {
   amount: number;
   pledger: string;
 }
+export interface RefundEvent extends FundotEvent {
+  type: "REFUND";
+  amount: number;
+  pledger: string;
+}
