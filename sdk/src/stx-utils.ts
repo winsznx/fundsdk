@@ -8,3 +8,4 @@ export const formatStxValue = (micro: number) => `${microStxToStx(micro).toFixed
 export const parseStxValue = (str: string) => stxToMicroStx(parseFloat(str.replace(/[^0-9\.]/g, "")));
 export const extractContractName = (fullAddr: string) => fullAddr.includes(".") ? fullAddr.split(".")[1] : null;
 export const extractDeployer = (fullAddr: string) => fullAddr.includes(".") ? fullAddr.split(".")[0] : fullAddr;
+export const getExplorerAccountUrl = (addr: string, network: string = "mainnet") => `https://explorer.hiro.so/txid/${addr}?chain=${network}`;
