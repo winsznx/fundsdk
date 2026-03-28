@@ -4,3 +4,4 @@ export const isValidPrincipal = (addr: string) => /^(S[PM])[a-zA-Z0-9]{37,39}$/.
 export const isMainnetAddress = (addr: string) => addr.startsWith("SP");
 export const isTestnetAddress = (addr: string) => addr.startsWith("ST");
 export const truncateAddress = (addr: string) => addr.length > 12 ? `${addr.slice(0, 5)}...${addr.slice(-4)}` : addr;
+export const formatStxValue = (micro: number) => `${microStxToStx(micro).toFixed(2)} STX`;
