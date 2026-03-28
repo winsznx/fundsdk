@@ -76,3 +76,9 @@ export class ContractCallFailedError extends FundotError {
     this.name = "ContractCallFailedError";
   }
 }
+export class InvalidMilestoneIndexError extends FundotError {
+  constructor() {
+    super("Provided milestone index is out of bounds.");
+    this.name = "InvalidMilestoneIndexError";
+  }
+}
