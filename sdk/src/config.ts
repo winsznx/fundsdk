@@ -3,3 +3,4 @@ export interface SDKConfig {
   apiUrl?: string;
 }
 export const defaultSDKConfig: SDKConfig = { network: "testnet" };
+export const resolveConfig = (config: Partial<SDKConfig>) => ({ ...defaultSDKConfig, ...config });
