@@ -7,3 +7,8 @@ export const resolveConfig = (config: Partial<SDKConfig>) => ({ ...defaultSDKCon
 export interface NetworkOptions { timeoutMs: number; retries: number; }
 export const defaultNetworkOptions: NetworkOptions = { timeoutMs: 15000, retries: 3 };
 export const resolveNetworkOptions = (opts: Partial<NetworkOptions>) => ({ ...defaultNetworkOptions, ...opts });
+export class ConfigurationBuilder {
+  private config: SDKConfig = defaultSDKConfig;
+  setNetwork(net: "mainnet" | "testnet") { this.config.network = net; return this; }
+  build() { return this.config; }
+}
