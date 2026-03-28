@@ -12,3 +12,4 @@ export const PLATFORM_FEE_PERCENTAGE = 2.5;
 export const CAMPAIGN_STATUS_PENDING = "pending";
 export const CAMPAIGN_STATUS_FUNDRAISING = "fundraising";
 export const CAMPAIGN_STATUS_COMPLETED = "completed";
+export const CAMPAIGN_STATUS_FAILED = "failed";
