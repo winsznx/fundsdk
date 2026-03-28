@@ -52,3 +52,9 @@ export class UnauthorizedVaultOwnerError extends FundotError {
     this.name = "UnauthorizedVaultOwnerError";
   }
 }
+export class TransactionRejectedError extends FundotError {
+  constructor() {
+    super("Transaction was rejected by the Hiro API node.");
+    this.name = "TransactionRejectedError";
+  }
+}
