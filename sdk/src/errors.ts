@@ -10,3 +10,9 @@ export class CampaignNotFoundError extends FundotError {
     this.name = "CampaignNotFoundError";
   }
 }
+export class MilestoneNotReleasedError extends FundotError {
+  constructor() {
+    super("The requested milestone has not yet been released.");
+    this.name = "MilestoneNotReleasedError";
+  }
+}
