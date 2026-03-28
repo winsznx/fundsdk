@@ -16,3 +16,8 @@ export interface ClaimMilestonePayload {
   campaignId: string;
   milestoneIndex: number;
 }
+export interface SetMilestoneReleasePayload {
+  campaignId: string;
+  milestoneIndex: number;
+  isReleased: boolean;
+}
