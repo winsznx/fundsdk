@@ -13,3 +13,4 @@ export const getExplorerTxUrl = (txid: string, network: string = "mainnet") => `
 export const ensureHexPrefix = (hex: string) => hex.startsWith("0x") ? hex : `0x${hex}`;
 export const stripHexPrefix = (hex: string) => hex.startsWith("0x") ? hex.slice(2) : hex;
 export const toSnakeCase = (str: string) => str.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`).replace(/^_/, "");
+export const calculateFeeThreshold = (feeMultiplier: number) => Math.floor(400 * feeMultiplier);
