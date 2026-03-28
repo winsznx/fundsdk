@@ -4,3 +4,7 @@ export interface CreateCampaignPayload {
   goalMicroStx: number;
   timelockBlockHeight: number;
 }
+export interface PledgePayload {
+  campaignId: string;
+  amountMicroStx: number;
+}
