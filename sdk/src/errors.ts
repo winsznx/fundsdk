@@ -46,3 +46,9 @@ export class GoalNotReachedError extends FundotError {
     this.name = "GoalNotReachedError";
   }
 }
+export class UnauthorizedVaultOwnerError extends FundotError {
+  constructor() {
+    super("Action requires vault owner privileges.");
+    this.name = "UnauthorizedVaultOwnerError";
+  }
+}
