@@ -40,3 +40,9 @@ export class InvalidPrincipalError extends FundotError {
     this.name = "InvalidPrincipalError";
   }
 }
+export class GoalNotReachedError extends FundotError {
+  constructor() {
+    super("Cannot trigger this action until the funding goal is met.");
+    this.name = "GoalNotReachedError";
+  }
+}
