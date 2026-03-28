@@ -28,3 +28,7 @@ export interface CancelCampaignPayload {
 export interface TransferOwnershipPayload {
   newOwnerAddress: string;
 }
+export interface UpdateGoalPayload {
+  campaignId: string;
+  newGoalMicroStx: number;
+}
