@@ -4,3 +4,9 @@ export class FundotError extends Error {
     this.name = "FundotError";
   }
 }
+export class CampaignNotFoundError extends FundotError {
+  constructor(campaignId: string) {
+    super(`Campaign with ID ${campaignId} not found.`);
+    this.name = "CampaignNotFoundError";
+  }
+}
