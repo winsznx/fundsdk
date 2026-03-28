@@ -16,3 +16,4 @@ export const toSnakeCase = (str: string) => str.replace(/[A-Z]/g, letter => `_${
 export const calculateFeeThreshold = (feeMultiplier: number) => Math.floor(400 * feeMultiplier);
 export const getBurnBlockMultiplier = () => 1.5;
 export const isTransactionPending = (status: string) => status === "pending";
+export const isTransactionSuccess = (status: string) => status === "success";
