@@ -19,3 +19,4 @@ export const isTransactionPending = (status: string) => status === "pending";
 export const isTransactionSuccess = (status: string) => status === "success";
 export const calculatePlatformFeeMicro = (amount: number) => Math.floor(amount * 0.025);
 export const calculateNetPayoutMicro = (amount: number) => amount - calculatePlatformFeeMicro(amount);
+export const toKebabCase = (str: string) => str.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
