@@ -70,3 +70,9 @@ export class RefundNotAvailableError extends FundotError {
     this.name = "RefundNotAvailableError";
   }
 }
+export class ContractCallFailedError extends FundotError {
+  constructor(reason: string) {
+    super(`Clarity contract execution failed: ${reason}`);
+    this.name = "ContractCallFailedError";
+  }
+}
