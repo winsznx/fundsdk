@@ -7,3 +7,4 @@ export const truncateAddress = (addr: string) => addr.length > 12 ? `${addr.slic
 export const formatStxValue = (micro: number) => `${microStxToStx(micro).toFixed(2)} STX`;
 export const parseStxValue = (str: string) => stxToMicroStx(parseFloat(str.replace(/[^0-9\.]/g, "")));
 export const extractContractName = (fullAddr: string) => fullAddr.includes(".") ? fullAddr.split(".")[1] : null;
+export const extractDeployer = (fullAddr: string) => fullAddr.includes(".") ? fullAddr.split(".")[0] : fullAddr;
