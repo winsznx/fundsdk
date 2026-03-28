@@ -40,3 +40,7 @@ export interface RemoveMilestonePayload {
   campaignId: string;
   milestoneIndex: number;
 }
+export interface PauseCampaignPayload {
+  campaignId: string;
+  pauseDurationBlocks: number;
+}
