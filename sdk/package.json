@@ -1,0 +1,30 @@
+{
+  "name": "@winsznx/fundsdk",
+  "version": "0.1.0",
+  "description": "A lightweight JavaScript SDK for interacting with the FundotStacks crowdfunding contracts.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "prepare": "npm run build"
+  },
+  "keywords": ["fundotstacks", "stacks", "sdk", "crowdfunding"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winsznx/fundsdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/winsznx/fundsdk/issues"
+  },
+  "homepage": "https://github.com/winsznx/fundsdk#readme",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
