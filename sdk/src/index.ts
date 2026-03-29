@@ -1,3 +1,5 @@
+import { showConnect } from "@stacks/connect";
+
 export type Network = "mainnet" | "testnet" | "devnet";
 
 export type CampaignStatus = "fundraising" | "completed" | "failed";
@@ -33,7 +35,21 @@ const currencyFormatter = new Intl.NumberFormat("en-US", {
   currency: "USD"
 });
 
-export const sdkVersion = "0.1.1";
+export const sdkVersion = "0.1.2";
+
+/**
+ * Initiates a wallet connection using Stacks Connect.
+ * This ensures the SDK is fully integrated with the Stacks ecosystem.
+ */
+export async function connectWallet(appDetails: { name: string; icon: string }) {
+  return new Promise((resolve, reject) => {
+    showConnect({
+      appDetails,
+      onFinish: (payload) => resolve(payload),
+      onCancel: () => reject(new Error("User cancelled login")),
+    });
+  });
+}
 
 export function calculateProgress(campaign: CampaignData): number {
   if (campaign.goal <= 0) {
@@ -77,5 +93,8 @@ export class FundotStacksSDK {
 export function formatCurrency(value: number): string {
   return currencyFormatter.format(value);
 }
+
+export * from "./errors";
+export * from "./constants";
 export * from "./errors";
 export * from "./constants";
