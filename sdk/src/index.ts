@@ -1,4 +1,12 @@
 import { showConnect } from "@stacks/connect";
+import { 
+  makeSTXTokenTransfer, 
+  broadcastTransaction, 
+  AnchorMode,
+  FungibleConditionCode,
+  makeStandardSTXPostCondition
+} from "@stacks/transactions";
+import { STACKS_MAINNET, STACKS_TESTNET } from "@stacks/network";
 
 export type Network = "mainnet" | "testnet" | "devnet";
 
@@ -35,11 +43,10 @@ const currencyFormatter = new Intl.NumberFormat("en-US", {
   currency: "USD"
 });
 
-export const sdkVersion = "0.1.2";
+export const sdkVersion = "0.1.3";
 
 /**
  * Initiates a wallet connection using Stacks Connect.
- * This ensures the SDK is fully integrated with the Stacks ecosystem.
  */
 export async function connectWallet(appDetails: { name: string; icon: string }) {
   return new Promise((resolve, reject) => {
@@ -49,6 +56,30 @@ export async function connectWallet(appDetails: { name: string; icon: string }) 
       onCancel: () => reject(new Error("User cancelled login")),
     });
   });
+}
+
+/**
+ * Helper to build a standard STX transfer for funding campaigns.
+ */
+export async function buildFundingTx(options: {
+  recipient: string,
+  amount: number,
+  senderKey: string,
+  network: "mainnet" | "testnet" | "devnet"
+}) {
+  const txOptions = {
+    recipient: options.recipient,
+    amount: options.amount,
+    senderKey: options.senderKey,
+    network: options.network,
+    anchorMode: AnchorMode.Any,
+    postConditions: [
+      makeStandardSTXPostCondition(options.recipient, FungibleConditionCode.Equal, options.amount)
+    ]
+  } as any;
+
+  const transaction = await makeSTXTokenTransfer(txOptions);
+  return transaction;
 }
 
 export function calculateProgress(campaign: CampaignData): number {
